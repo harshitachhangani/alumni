@@ -11,6 +11,8 @@
 			<small><a href="index.php?page=signup" id="new_account">Create New Account</a></small>
 		</div>
 		<button class="button btn btn-info btn-sm">Login</button>
+		<!-- <button class="button btn btn-info btn-sm" href="index.php">Cancel</button> -->
+		<a class="button btn btn-info btn-sm" href="index.php" id="login">Cancel</a>
 	</form>
 </div>
 

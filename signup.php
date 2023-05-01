@@ -77,7 +77,7 @@ include 'admin/db_connect.php';
                                         </div>
                                         <div class="row form-group">
                                             <div class="col-md-5">
-                                                <label for="" class="control-label">Currently Connected To</label>
+                                                <label for="" class="control-label">Bio</label>
                                                 <textarea name="connected_to" id="" cols="30" rows="3" class="form-control"></textarea>
                                             </div>
                                             <div class="col-md-5">

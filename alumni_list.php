@@ -145,3 +145,42 @@ header.masthead,header.masthead:before {
                 </div>
             </div>
 
+            
+<script>
+    // $('.card.alumni-list').click(function(){
+    //     location.href = "index.php?page=view_alumni&id="+$(this).attr('data-id')
+    // })
+    $('.book-alumni').click(function(){
+        uni_modal("Submit Booking Request","booking.php?alumni_id="+$(this).attr('data-id'))
+    })
+    $('.alumni-img img').click(function(){
+        viewer_modal($(this).attr('src'))
+    })
+     $('#filter').keypress(function(e){
+    if(e.which == 13)
+        $('#search').trigger('click')
+   })
+    $('#search').click(function(){
+        var txt = $('#filter').val()
+        start_load()
+        if(txt == ''){
+        $('.item').show()
+        end_load()
+        return false;
+        }
+        $('.item').each(function(){
+            var content = "";
+            $(this).find(".filter-txt").each(function(){
+                content += ' '+$(this).text()
+            })
+            if((content.toLowerCase()).includes(txt.toLowerCase()) == true){
+                $(this).toggle(true)
+            }else{
+                $(this).toggle(false)
+            }
+        })
+        end_load()
+    })
+
+</script>
+
