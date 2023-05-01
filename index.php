@@ -185,7 +185,7 @@ a.jqte_tool_label.unselectable {
                 </div>
             </div>
             <br>
-            <div class="container"><div class="small text-center text-muted">Copyright © 2023 - <?php echo $_SESSION['system']['name'] ?> | <a href="https://www.alumni_connect.com/" target="_blank">Alumni Connect</a></div></div>
+            <div class="container"><div class="small text-center text-muted">Copyright © 2023 - <?php echo $_SESSION['system']['name'] ?> | <a href="http://localhost/alumni-management-system/alumni/index.php?page=home" target="_blank">Alumni Connect</a></div></div>
         </footer>
         
        <?php include('footer.php') ?>

@@ -249,59 +249,6 @@ Class Action {
 		if($update)
 			return 1;
 	}
-	function save_gallery(){
-		extract($_POST);
-		$img = array();
-  		$fpath = 'assets/uploads/gallery';
-		$files= is_dir($fpath) ? scandir($fpath) : array();
-		foreach($files as $val){
-			if(!in_array($val, array('.','..'))){
-				$n = explode('_',$val);
-				$img[$n[0]] = $val;
-			}
-		}
-		if(empty($id)){
-			$save = $this->db->query("INSERT INTO gallery set about = '$about' ");
-			if($save){
-				$id = $this->db->insert_id;
-				$folder = "assets/uploads/gallery/";
-				$file = explode('.',$_FILES['img']['name']);
-				$file = end($file);
-				if(is_file($folder.$id.'/_img'.'.'.$file))
-					unlink($folder.$id.'/_img'.'.'.$file);
-				if(isset($img[$id]))
-						unlink($folder.$img[$id]);
-				if($_FILES['img']['tmp_name'] != ''){
-					$fname = $id.'_img'.'.'.$file;
-					$move = move_uploaded_file($_FILES['img']['tmp_name'],'assets/uploads/gallery/'. $fname);
-				}
-			}
-		}else{
-			$save = $this->db->query("UPDATE gallery set about = '$about' where id=".$id);
-			if($save){
-				if($_FILES['img']['tmp_name'] != ''){
-					$folder = "assets/uploads/gallery/";
-					$file = explode('.',$_FILES['img']['name']);
-					$file = end($file);
-					if(is_file($folder.$id.'/_img'.'.'.$file))
-						unlink($folder.$id.'/_img'.'.'.$file);
-					if(isset($img[$id]))
-						unlink($folder.$img[$id]);
-					$fname = $id.'_img'.'.'.$file;
-					$move = move_uploaded_file($_FILES['img']['tmp_name'],'assets/uploads/gallery/'. $fname);
-				}
-			}
-		}
-		if($save)
-			return 1;
-	}
-	function delete_gallery(){
-		extract($_POST);
-		$delete = $this->db->query("DELETE FROM gallery where id = ".$id);
-		if($delete){
-			return 1;
-		}
-	}
 	function save_career(){
 		extract($_POST);
 		$data = " company = '$company' ";

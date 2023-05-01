@@ -182,29 +182,6 @@ INSERT INTO `forum_topics` (`id`, `title`, `description`, `user_id`, `date_creat
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gallery`
---
-
-CREATE TABLE `gallery` (
-  `id` int(30) NOT NULL,
-  `about` text NOT NULL,
-  `created` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `gallery`
---
-
-INSERT INTO `gallery` (`id`, `about`, `created`) VALUES
-(1, 'Samplee', '2020-10-15 13:08:27'),
-(2, 'asdasd', '2020-10-15 13:15:37'),
-(3, 'asdasdrtgfdg', '2020-10-15 13:15:45'),
-(4, 'dfgdfgdfg', '2020-10-15 13:15:53'),
-(5, 'dfgdfgdfg', '2020-10-15 13:16:07');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `system_settings`
 --
 

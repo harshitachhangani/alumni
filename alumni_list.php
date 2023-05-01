@@ -71,7 +71,7 @@ header.masthead,header.masthead:before {
             <div class="container-fluid h-100">
                 <div class="row h-100 align-items-center justify-content-center text-center">
                     <div class="col-lg-8 align-self-end mb-4 page-title">
-                        <h3 class="text-white">Alumnus/Alumnae List</h3>
+                        <h3 class="text-white">Alumnus List</h3>
                         <hr class="divider my-4" />
 
                     <div class="col-md-12 mb-2 justify-content-center">
@@ -90,7 +90,7 @@ header.masthead,header.masthead:before {
 		                      <div class="input-group-prepend">
 		                        <span class="input-group-text" id="filter-field"><i class="fa fa-search"></i></span>
 		                      </div>
-		                      <input type="text" class="form-control" id="filter" placeholder="Filter name,course, etc." aria-label="Filter" aria-describedby="filter-field">
+		                      <input type="text" class="form-control" id="filter" placeholder="Filter name,course,skills,batch etc." aria-label="Filter" aria-describedby="filter-field">
 		                    </div>
 		                </div>
 		                <div class="col-md-4">
@@ -126,7 +126,7 @@ header.masthead,header.masthead:before {
                                 <p class="filter-txt">Email: <b><?php echo $row['email'] ?></b></p>
                                 <p class="filter-txt">Course: <b><?php echo $row['course'] ?></b></p>
                                 <p class="filter-txt">Batch: <b><?php echo $row['batch'] ?></b></p>
-                                <p class="filter-txt">Currently working in/as <b><?php echo $row['connected_to'] ?></b></p>
+                                <p class="filter-txt">Bio:<br> <b><?php echo $row['connected_to'] ?></b></p>
                                     <br>
                                 </div>
                                 <div> <a class="btn btn-primary" href="mailto:<?php echo $row['email']?>" role="button">Connect Mail</a>   

@@ -64,16 +64,6 @@ if($action == "update_alumni_acc"){
 	if($save)
 		echo $save;
 }
-if($action == "save_gallery"){
-	$save = $crud->save_gallery();
-	if($save)
-		echo $save;
-}
-if($action == "delete_gallery"){
-	$save = $crud->delete_gallery();
-	if($save)
-		echo $save;
-}
 
 if($action == "save_career"){
 	$save = $crud->save_career();
